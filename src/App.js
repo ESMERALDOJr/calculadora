@@ -1,18 +1,22 @@
+// Importar React (etapa obrigatória).
 import React from 'react';
 
+// foi criada uma classe calculadora.
 class Calculadora extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            a: '',
-            b: '',
-            result: ''
-        };
-        this.handleChangeA = this.handleChangeA.bind(this);
-        this.handleChangeB = this.handleChangeB.bind(this);
-        this.handleCalculate = this.handleCalculate.bind(this);
-    }
 
+        // define nosso estado padrão
+        this.state = {
+            num1: '',
+            num2: '',
+            resultado: ''
+        };
+        this.handleNum1 = this.handleNum1.bind(this);
+        this.handleNum2 = this.handleNum2.bind(this);
+        this.handleCalculo = this.handleCalculo.bind(this);
+    }
+    // Criar campos de entrada e saída e os Botões funcionais.
     render() {
         return (
             <div>
@@ -20,22 +24,22 @@ class Calculadora extends React.Component {
                     <fieldset>
                         <div>
                             <label for="valor1">Número 1: </label>
-                            <input type="text" onChange={this.handleChangeA} value={this.state.a} />
+                            <input type="text" onChange={this.handleNum1} value={this.state.num1} />
                         </div>
                         <div>
                             <label for="valor1">Número 2: </label>
-                            <input type="text" onChange={this.handleChangeB} value={this.state.b} />
+                            <input type="text" onChange={this.handleNum2} value={this.state.num2} />
                         </div>
 
                         <label for="calcular">Escolha a operação desejada:</label><br></br>
-                        <button type="button" onClick={this.handleCalculate}>Adição</button>
-                        <button type="button" onClick={this.handleCalculate}>Subtração</button>
-                        <button type="button" onClick={this.handleCalculate}>Multiplicação</button>
-                        <button type="button" onClick={this.handleCalculate}>Divisão</button><br></br>
-<br></br>
+                        <button type="button" onClick={this.handleCalculo}>Adição</button>
+                        <button type="button" onClick={this.handleCalculo}>Subtração</button>
+                        <button type="button" onClick={this.handleCalculo}>Multiplicação</button>
+                        <button type="button" onClick={this.handleCalculo}>Divisão</button><br></br>
+                        <br></br>
                         <div>
                             <label for="result">Resultado: </label>
-                            <input type="text" value={this.state.result} disabled="disabled" />
+                            <input type="text" value={this.state.resultado} disabled="disabled" />
                         </div>
 
                     </fieldset>
@@ -44,36 +48,37 @@ class Calculadora extends React.Component {
         );
     }
 
-    handleChangeA(e) {
-        this.setState({ a: e.target.value });
+    handleNum1(e) {
+        this.setState({ num1: e.target.value });
     }
 
-    handleChangeB(e) {
-        this.setState({ b: e.target.value });
+    handleNum2(e) {
+        this.setState({ num2: e.target.value });
     }
 
-    handleCalculate(e) {
+    handleCalculo(e) {
         e.preventDefault();
 
         switch (e.target.innerText) {
             case 'Adição':
-                var result = parseFloat(this.state.a) + parseFloat(this.state.b);
+                var resultado = parseFloat(this.state.num1) + parseFloat(this.state.num2);
                 break;
             case 'Subtração':
-                var result = parseFloat(this.state.a) - parseFloat(this.state.b);
+                var resultado = parseFloat(this.state.num1) - parseFloat(this.state.num2);
                 break;
             case 'Multiplicação':
-                var result = parseFloat(this.state.a) * parseFloat(this.state.b);
+                var resultado = parseFloat(this.state.num1) * parseFloat(this.state.num2);
                 break;
             case 'Divisão':
-                var result = parseFloat(this.state.a) / parseFloat(this.state.b);
+                var resultado = parseFloat(this.state.num1) / parseFloat(this.state.num2);
                 break;
         }
 
-        this.setState({ result: '' + result });
+        this.setState({ resultado: '' + resultado });
     }
 
 }
+// Exportar calculadora.
 export default Calculadora;
 
 
