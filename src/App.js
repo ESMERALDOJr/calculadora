@@ -1,7 +1,7 @@
 // Importar React (etapa obrigatória).
 import React from 'react';
 
-// foi criada uma classe calculadora.
+// Foi criada uma classe calculadora.
 class Calculadora extends React.Component {
     constructor(props) {
         super(props);
@@ -16,6 +16,8 @@ class Calculadora extends React.Component {
         this.handleNum2 = this.handleNum2.bind(this);
         this.handleCalculo = this.handleCalculo.bind(this);
     }
+
+    //Renderiza a página para visualização    
     // Criar campos de entrada e saída e os Botões funcionais.
     render() {
         return (
@@ -47,7 +49,8 @@ class Calculadora extends React.Component {
             </div >
         );
     }
-
+    
+    //Indica as variáveis para modificar no cód.
     handleNum1(e) {
         this.setState({ num1: e.target.value });
     }
@@ -59,6 +62,7 @@ class Calculadora extends React.Component {
     handleCalculo(e) {
         e.preventDefault();
 
+        //Funções para realização do cálculo e suas modificações.
         switch (e.target.innerText) {
             case 'Adição':
                 var resultado = parseFloat(this.state.num1) + parseFloat(this.state.num2);
