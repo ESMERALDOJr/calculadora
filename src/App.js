@@ -34,12 +34,13 @@ class Calculadora extends React.Component {
                         </div>
 
                         <label for="calcular">Escolha a operação desejada:</label><br></br>
+                        
                         <button type="button" onClick={this.handleCalculo}>Adição</button>
                         <button type="button" onClick={this.handleCalculo}>Subtração</button>
                         <button type="button" onClick={this.handleCalculo}>Multiplicação</button>
                         <button type="button" onClick={this.handleCalculo}>Divisão</button><br></br>
                         <br></br>
-                        <div>
+                        <div class="tipo">
                             <label for="result">Resultado: </label>
                             <input type="text" value={this.state.resultado} disabled="disabled" />
                         </div>

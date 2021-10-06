@@ -30,3 +30,13 @@ form button {
     
 }
 
+form input:disabled {
+    background: #ffffff;
+}
+
+.tipo input {
+    color: black;
+}
+
+
+
