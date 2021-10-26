@@ -6,7 +6,7 @@ class Calculadora extends React.Component {
     constructor(props) {
         super(props);
 
-        // define nosso estado padrão
+        // define estado padrão
         this.state = {
             num1: '',
             num2: '',
