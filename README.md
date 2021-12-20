@@ -1,3 +1,7 @@
+<div align="center">
+    <img src="\Users\Esmeraldo Junior\OneDrive - Fatec Centro Paula Souza\Área de Trabalho\Calculadora.jpg" width="400px"</img> 
+</div>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
