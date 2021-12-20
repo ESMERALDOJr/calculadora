@@ -1,6 +1,4 @@
-<div align="center">
-    <img src="\Users\Esmeraldo Junior\OneDrive - Fatec Centro Paula Souza\Área de Trabalho\Calculadora.jpg" width="400px"</img> 
-</div>
+## Calculadora simples utilizando apenas as quatro operações. <img src="https://img.icons8.com/external-bearicons-gradient-bearicons/64/000000/external-Calculator-business-and-marketing-bearicons-gradient-bearicons.png"/>
 
 # Getting Started with Create React App
 
